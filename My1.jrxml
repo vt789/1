@@ -44,6 +44,11 @@
 		<queryString>
 			<![CDATA[]]>
 		</queryString>
+		<field name="Field_2" class="java.lang.String"/>
+		<field name="Field_1" class="java.lang.String"/>
+		<variable name="Field_11" class="java.lang.Integer" resetType="Column" calculation="Count">
+			<variableExpression><![CDATA[$F{Field_1}]]></variableExpression>
+		</variable>
 	</subDataset>
 	<queryString>
 		<![CDATA[]]>
@@ -70,7 +75,7 @@
 		</band>
 	</title>
 	<pageHeader>
-		<band height="13"/>
+		<band height="62"/>
 	</pageHeader>
 	<pageFooter>
 		<band height="17">
@@ -112,7 +117,12 @@
 								<textFieldExpression><![CDATA["Header"]]></textFieldExpression>
 							</textField>
 						</jr:tableHeader>
-						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:tableFooter style="Table_TH" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="160" height="30" uuid="5776a8b8-79c2-42dc-bde6-9f3ede8f0718"/>
+								<textFieldExpression><![CDATA[$F{Field_2}]]></textFieldExpression>
+							</textField>
+						</jr:tableFooter>
 						<jr:columnHeader style="Table_CH" height="30">
 							<staticText>
 								<reportElement mode="Transparent" x="0" y="0" width="160" height="30" forecolor="#006699" backcolor="#E6E6E6" uuid="aeb6b252-62bb-4f41-9ca4-b28567a1041e"/>
@@ -122,7 +132,12 @@
 								<text><![CDATA[]]></text>
 							</staticText>
 						</jr:columnHeader>
-						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:columnFooter style="Table_CH" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="160" height="30" uuid="e0b82f30-09fb-4374-a51f-456c50637c28"/>
+								<textFieldExpression><![CDATA[$V{Field_11}]]></textFieldExpression>
+							</textField>
+						</jr:columnFooter>
 						<jr:detailCell style="Table_TD" height="30">
 							<textField>
 								<reportElement key="" x="0" y="0" width="160" height="30" uuid="c18a11e7-5601-4d73-ad94-9817ea3e3ca9"/>
