@@ -1,5 +1,2 @@
 Hello dev!
-Hello first change
-my change
-lala
 commit - 3
